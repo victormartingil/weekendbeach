@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario Sábado - Weekend Beach Festival (Timeline Realista)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        /* Escala de la línea de tiempo: 3px por minuto. */
+        .timeline-container {
+            /* Rango de 20:00 a 05:00 = 9 horas * 60 min/h * 3px/min = 1620px de altura total. */
+            height: 1620px; 
+        }
+        .artist-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .artist-card:hover {
+            transform: scale(1.03);
+            z-index: 20; /* Asegura que la tarjeta se superponga a las demás al hacer hover */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white antialiased">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-10 md:mb-12">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                Weekend Beach Festival
+            </h1>
+            <p class="text-xl md:text-2xl font-bold text-gray-300 mt-2">Horario Sábado - Timeline</p>
+        </header>
+
+        <div class="flex">
+            <!-- Contenedor Principal de la Línea de Tiempo -->
+            <div class="w-full relative border-l-2 border-gray-700 -ml-px">
+                <!-- Títulos de los Escenarios -->
+                <div class="sticky top-0 z-10 bg-gray-900/80 backdrop-blur-sm flex">
+                     <div class="w-1/2 p-4 border-b-2 border-purple-500/50">
+                        <h2 class="text-xl md:text-2xl font-bold text-center text-purple-400">Escenario Victoria</h2>
+                    </div>
+                    <div class="w-1/2 p-4 border-b-2 border-pink-500/50 border-l-2 border-gray-700">
+                        <h2 class="text-xl md:text-2xl font-bold text-center text-pink-400">Escenario Sunrise</h2>
+                    </div>
+                </div>
+
+                <!-- Contenedor de las tarjetas de eventos -->
+                <div class="relative timeline-container">
+                    <!-- HORARIOS CORREGIDOS SEGÚN LA LISTA DE TEXTO -->
+
+                    <!-- Artistas Escenario Victoria (Izquierda) -->
+                    <!-- Morochos: 20:00. Dur: 60min. top: 0px; h: 172px -->
+                    <div class="absolute w-1/2 p-2" style="top: 0px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-purple-500 shadow-lg flex flex-col justify-center" style="height: 172px;">
+                            <p class="font-bold">Morochos</p>
+                            <p class="text-sm text-gray-300">(Pop / Flamenco fusión)</p>
+                            <p class="text-xs text-purple-300 mt-1">20:00</p>
+                        </div>
+                    </div>
+                    <!-- Nil Moliner: 21:00. Dur: 60min. top: 180px; h: 172px -->
+                    <div class="absolute w-1/2 p-2" style="top: 180px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-purple-500 shadow-lg flex flex-col justify-center" style="height: 172px;">
+                            <p class="font-bold">Nil Moliner</p>
+                            <p class="text-sm text-gray-300">(Pop / Canción de autor)</p>
+                            <p class="text-xs text-purple-300 mt-1">21:00</p>
+                        </div>
+                    </div>
+                    <!-- Rozalén: 22:00. Dur: 75min. top: 360px; h: 217px -->
+                    <div class="absolute w-1/2 p-2" style="top: 360px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-purple-500 shadow-lg flex flex-col justify-center" style="height: 217px;">
+                            <p class="font-bold">Rozalén</p>
+                            <p class="text-sm text-gray-300">(Pop / Cantautor / Folk)</p>
+                            <p class="text-xs text-purple-300 mt-1">22:00</p>
+                        </div>
+                    </div>
+                    <!-- Estopa: 23:15. Dur: 90min. top: 585px; h: 262px -->
+                    <div class="absolute w-1/2 p-2" style="top: 585px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-purple-500 shadow-lg flex flex-col justify-center" style="height: 262px;">
+                            <p class="font-bold text-lg">Estopa</p>
+                            <p class="text-sm text-gray-300">(Rumba / Rock / Pop español)</p>
+                            <p class="text-xs text-purple-300 mt-1">23:15</p>
+                        </div>
+                    </div>
+                    <!-- Derby Motoreta's Burrito Kachimba: 00:45. Dur: 75min. top: 855px; h: 217px -->
+                    <div class="absolute w-1/2 p-2" style="top: 855px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-purple-500 shadow-lg flex flex-col justify-center" style="height: 217px;">
+                            <p class="font-bold">Derby Motoreta's B.K.</p>
+                            <p class="text-sm text-gray-300">(Rock psicodélico andaluz)</p>
+                            <p class="text-xs text-purple-300 mt-1">00:45</p>
+                        </div>
+                    </div>
+                    <!-- Pepe y Vizio: 02:00. Dur: 75min. top: 1080px; h: 217px -->
+                    <div class="absolute w-1/2 p-2" style="top: 1080px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-purple-500 shadow-lg flex flex-col justify-center" style="height: 217px;">
+                            <p class="font-bold">Pepe y Vizio</p>
+                            <p class="text-sm text-gray-300">(Trap / Rap / Urbana)</p>
+                            <p class="text-xs text-purple-300 mt-1">02:00</p>
+                        </div>
+                    </div>
+                    <!-- José de las Heras: 03:15. Dur: 45min. top: 1305px; h: 127px -->
+                    <div class="absolute w-1/2 p-2" style="top: 1305px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-purple-500 shadow-lg flex flex-col justify-center" style="height: 127px;">
+                           <p class="font-bold">José de las Heras</p>
+                            <p class="text-sm text-gray-300">(Electrónica / House)</p>
+                            <p class="text-xs text-purple-300 mt-1">03:15</p>
+                        </div>
+                    </div>
+                    <!-- Hedex: 04:00. Dur: 60min. top: 1440px; h: 172px -->
+                    <div class="absolute w-1/2 p-2" style="top: 1440px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-purple-500 shadow-lg flex flex-col justify-center" style="height: 172px;">
+                            <p class="font-bold">Hedex</p>
+                            <p class="text-sm text-gray-300">(Drum & Bass / Electrónica)</p>
+                            <p class="text-xs text-purple-300 mt-1">04:00</p>
+                        </div>
+                    </div>
+
+                    <!-- Artistas Escenario Sunrise (Derecha) -->
+                    <!-- Antonio Hierro: 20:00. Dur: 60min. top: 0px; h: 172px -->
+                    <div class="absolute w-1/2 left-1/2 p-2" style="top: 0px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-pink-500 shadow-lg flex flex-col justify-center" style="height: 172px;">
+                            <p class="font-bold">Antonio Hierro</p>
+                            <p class="text-sm text-gray-300">(House / Deep House)</p>
+                            <p class="text-xs text-pink-300 mt-1">20:00</p>
+                        </div>
+                    </div>
+                    <!-- Oriol Calvo: 21:00. Dur: 60min. top: 180px; h: 172px -->
+                    <div class="absolute w-1/2 left-1/2 p-2" style="top: 180px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-pink-500 shadow-lg flex flex-col justify-center" style="height: 172px;">
+                            <p class="font-bold">Oriol Calvo</p>
+                            <p class="text-sm text-gray-300">(House / Electro House)</p>
+                            <p class="text-xs text-pink-300 mt-1">21:00</p>
+                        </div>
+                    </div>
+                    <!-- Art No Logia: 22:00. Dur: 60min. top: 360px; h: 172px -->
+                    <div class="absolute w-1/2 left-1/2 p-2" style="top: 360px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-pink-500 shadow-lg flex flex-col justify-center" style="height: 172px;">
+                           <p class="font-bold">Art No Logia</p>
+                            <p class="text-sm text-gray-300">(Techno / Electrónica)</p>
+                            <p class="text-xs text-pink-300 mt-1">22:00</p>
+                        </div>
+                    </div>
+                    <!-- Mahony: 23:00. Dur: 90min. top: 540px; h: 262px -->
+                    <div class="absolute w-1/2 left-1/2 p-2" style="top: 540px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-pink-500 shadow-lg flex flex-col justify-center" style="height: 262px;">
+                           <p class="font-bold">Mahony</p>
+                            <p class="text-sm text-gray-300">(Tech House / Minimal)</p>
+                            <p class="text-xs text-pink-300 mt-1">23:00</p>
+                        </div>
+                    </div>
+                    <!-- Hozho: 00:30. Dur: 90min. top: 810px; h: 262px -->
+                    <div class="absolute w-1/2 left-1/2 p-2" style="top: 810px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-pink-500 shadow-lg flex flex-col justify-center" style="height: 262px;">
+                           <p class="font-bold">Hozho</p>
+                            <p class="text-sm text-gray-300">(Melodic Techno)</p>
+                            <p class="text-xs text-pink-300 mt-1">00:30</p>
+                        </div>
+                    </div>
+                    <!-- Agents of Time: 02:00. Dur: 90min. top: 1080px; h: 262px -->
+                    <div class="absolute w-1/2 left-1/2 p-2" style="top: 1080px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-pink-500 shadow-lg flex flex-col justify-center" style="height: 262px;">
+                           <p class="font-bold">Agents of Time</p>
+                            <p class="text-sm text-gray-300">(Melodic Techno / Electro)</p>
+                            <p class="text-xs text-pink-300 mt-1">02:00</p>
+                        </div>
+                    </div>
+                    <!-- Mathame: 03:30. Dur: 90min. top: 1350px; h: 262px -->
+                    <div class="absolute w-1/2 left-1/2 p-2" style="top: 1350px;">
+                        <div class="artist-card bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg border-l-8 border-pink-500 shadow-lg flex flex-col justify-center" style="height: 262px;">
+                           <p class="font-bold">Mathame</p>
+                            <p class="text-sm text-gray-300">(Melodic Techno)</p>
+                            <p class="text-xs text-pink-300 mt-1">03:30</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="text-center mt-8 text-gray-500 text-sm">
+            <p>Horario extraído de la información proporcionada. La altura de cada tarjeta representa la duración de la actuación. Sujeto a cambios.</p>
+        </footer>
+    </div>
+</body>
+</html>
